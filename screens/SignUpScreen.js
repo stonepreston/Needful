@@ -5,7 +5,7 @@ import {
   StackNavigator,
 } from 'react-navigation';
 
-class SignUpScreen extends React.Component {
+export default class SignUpScreen extends React.Component {
 
   static navigationOptions = {
     title: 'Sign Up'
@@ -13,10 +13,18 @@ class SignUpScreen extends React.Component {
 
   render () {
     const { navigate } = this.props.navigation;
-    <Button
-      title='Go to Login'
-      onPress={() =>
-        navigate('Login')
-      }
+
+    return (
+      <View>
+        <Text>Already have an account?</Text>
+        <Button
+          title='Login'
+          onPress={() =>
+            navigate('Login')
+          }
+        />
+      </View>
+
+    );
   }
 }

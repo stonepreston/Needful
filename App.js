@@ -3,19 +3,27 @@ import { StyleSheet, Text, View } from 'react-native';
 import {
   StackNavigator,
 } from 'react-navigation';
-import SignUpScreen from 'SignUpScreen.js';
-import LoginScreen from 'LoginScreen.js';
+import HomeScreen from './screens/HomeScreen.js';
+import SignUpScreen from './screens/SignUpScreen.js';
+import LoginScreen from './screens/LoginScreen.js';
 
 const App = StackNavigator({
+
+  Home: {
+    screen: HomeScreen,
+  },
+
   SignUp: {
-    screen: SignUpScreen
+    screen: SignUpScreen,
   },
 
   Login: {
-    screen: LoginScreen
+    screen: LoginScreen,
   },
-  
+
 });
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {

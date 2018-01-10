@@ -5,18 +5,23 @@ import {
   StackNavigator,
 } from 'react-navigation';
 
-class LoginScreen extends React.Component {
+export default class LoginScreen extends React.Component {
 
   static navigationOptions = {
-    title: 'Login'
+    title: 'Log In'
   };
 
   render () {
     const { navigate } = this.props.navigation;
-    <Button
-      title='Go to Login'
-      onPress={() =>
-        navigate('Login')
-      }
+
+    return (
+      <Button
+        title='Login'
+        onPress={() =>
+          navigate('Login')
+        }
+      />
+
+    );
   }
 }
