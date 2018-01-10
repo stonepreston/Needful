@@ -4,11 +4,12 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import {
   StackNavigator,
 } from 'react-navigation';
+import { onSignOut } from '../auth.js';
 
-export default class LoginScreen extends React.Component {
+export default class Settings extends React.Component {
 
   static navigationOptions = {
-    title: 'Log In'
+    title: 'Settings',
   };
 
   render () {
@@ -16,10 +17,10 @@ export default class LoginScreen extends React.Component {
 
     return (
       <Button
-        title='Login'
-        onPress={() =>
-          navigate('Login')
-        }
+        title='Sign Out'
+        onPress={() => {
+          onSignOut().then(() => navigate("SignedOut"));
+        }}
       />
 
     );

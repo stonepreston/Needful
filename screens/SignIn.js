@@ -4,11 +4,12 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import {
   StackNavigator,
 } from 'react-navigation';
+import { onSignIn } from '../auth.js';
 
-export default class HomeScreen extends React.Component {
+export default class SignIn extends React.Component {
 
   static navigationOptions = {
-    title: 'Home'
+    
   };
 
   render () {
@@ -16,10 +17,10 @@ export default class HomeScreen extends React.Component {
 
     return (
       <Button
-        title='Sign Up'
-        onPress={() =>
-          navigate('SignUp')
-        }
+        title='Sign In'
+        onPress={() => {
+          onSignIn().then(() => navigate("SignedIn"));
+        }}
       />
 
     );
